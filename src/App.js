@@ -5,21 +5,23 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // import pages here
 import Index from './pages/index.js';
-import Greet from './pages/Greet.js';
-import Generate from './pages/Generate.js';
+const Greet = React.lazy(() => import('./pages/Greet.js'));
+const Generate = React.lazy(() => import('./pages/Generate.js'));
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" render={(props) => <Index {...props} />} />
-        <Route
-          exact
-          path="/generate"
-          render={(props) => <Generate {...props} />}
-        />
-        <Route exact path="/:name" render={(props) => <Greet {...props} />} />
-      </Switch>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" render={(props) => <Index {...props} />} />
+          <Route
+            exact
+            path="/generate"
+            render={(props) => <Generate {...props} />}
+          />
+          <Route exact path="/:name" render={(props) => <Greet {...props} />} />
+        </Switch>
+      </React.Suspense>
     </BrowserRouter>
   );
 }
