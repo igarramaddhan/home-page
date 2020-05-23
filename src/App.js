@@ -5,8 +5,10 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // import pages here
 import Index from './pages/index.js';
-const Greet = React.lazy(() => import('./pages/Greet.js'));
-const Generate = React.lazy(() => import('./pages/Generate.js'));
+import Greet from './pages/Greet.js';
+import Generate from './pages/Generate.js';
+// const Greet = React.lazy(() => import('./pages/Greet.js'));
+// const Generate = React.lazy(() => import('./pages/Generate.js'));
 
 function App() {
   return (
