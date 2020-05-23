@@ -1,5 +1,5 @@
 {
-  "homepage": "http://igarramaddhan.github.io/home-page",
+	"homepage": "http://igarramaddhan.github.io/home-page",
 	"name": "home-page",
 	"version": "1.0.0",
 	"main": "index.js",
@@ -10,9 +10,9 @@
 		"start": "serve -s dist",
 		"format": "prettier --write \"src/**/*.js\"",
 		"eslint-fix": "eslint --fix \"src/**/*.js\"",
-    "build": "webpack --mode production --progress",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+		"build": "webpack --mode production --progress",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"dotenv-webpack": "^1.8.0",
