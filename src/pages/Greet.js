@@ -8,7 +8,6 @@ const Container = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
-  background-color: #232933;
 `;
 
 const ContentContainer = styled.div`
@@ -19,6 +18,11 @@ const ContentContainer = styled.div`
   font-size: 22px;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 24px;
+    font-size: 20px;
+  }
 `;
 
 const Greet = () => {
@@ -31,7 +35,7 @@ const Greet = () => {
         <p>
           Mohon maaf lahir dan batin ya kalo aku ada salah selama ini. <br />
           Maaf belum bisa ngasih apa-apa dulu ya hehe 😁. <br />
-          Maaf kalo juga sering ngerepotin 🙏
+          Maaf juga kalo sering ngerepotin 🙏
         </p>
         <p>Selamat Hari Raya Idul Fitri 1441 H</p>
         <p>{`Wassalamu'alaikum Wr. Wb.`}</p>

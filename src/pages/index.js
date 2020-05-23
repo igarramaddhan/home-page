@@ -10,13 +10,12 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
-  padding: 24px;
+  padding: 0 24px;
   height: 100vh;
   font-size: 22px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #232933;
 `;
 
 const Index = () => (
