@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useParams} from 'react-router-dom';
+import Helm from '../components/Helm';
 
 const Container = styled.div`
   flex: 1;
@@ -29,6 +30,10 @@ const Greet = () => {
   const {name} = useParams<{name: string}>();
   return (
     <Container>
+      <Helm
+        title={`Hi ${atob(name)}`}
+        description="Selamat Hari Raya Idul Fitri 1441 H"
+      />
       <ContentContainer>
         <p>{`Assalamu'alaikum, ${atob(name)}`}</p>
         <p>Semoga kamu sehat selalu dan selalu dalam lindungan-Nya.</p>

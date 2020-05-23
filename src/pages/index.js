@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Helm from '../components/Helm';
 
 const Container = styled.div`
   flex: 1;
@@ -20,6 +21,7 @@ const ContentContainer = styled.div`
 
 const Index = () => (
   <Container>
+    <Helm title="Igar's Page" description="What?" />
     <ContentContainer>nyari apa?</ContentContainer>
   </Container>
 );
